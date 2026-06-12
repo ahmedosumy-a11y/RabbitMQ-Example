@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "+2D6z+/egRc=",
+  "success": true,
+  "projectFilePath": "/home/galaxy/Downloads/C#.Net Project/Projects/RabbitMQ/Producer/Producer.csproj",
+  "expectedPackageFiles": [
+    "/home/galaxy/.nuget/packages/microsoft.aspnetcore.openapi/9.0.10/microsoft.aspnetcore.openapi.9.0.10.nupkg.sha512",
+    "/home/galaxy/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
