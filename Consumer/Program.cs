@@ -37,18 +37,24 @@ namespace Consumer
                 autoDelete: false,
                 arguments: null);
 
+            await channel.BasicQosAsync(prefetchSize: 0, prefetchCount: 1, global: false);
+
             var consumer = new AsyncEventingBasicConsumer(channel);
+            var random = new Random();
+            
 
             consumer.ReceivedAsync += (sender, args) =>
             {
+                var processingTime = random.Next(1, 6);
                 var body = args.Body.ToArray();
                 var message = Encoding.UTF8.GetString(body);
-                Console.WriteLine($"Message Received: {message}");
-
+                Console.WriteLine($"Message Received: {message}\n will take {processingTime} to process");
+                Thread.Sleep(TimeSpan.FromSeconds(processingTime));
+                channel.BasicAckAsync(deliveryTag: args.DeliveryTag, multiple: false);
                 return Task.CompletedTask;
             };
 
-            await channel.BasicConsumeAsync(queue: rabbitMQConfig.QueueName, autoAck: true, consumer: consumer);
+            await channel.BasicConsumeAsync(queue: rabbitMQConfig.QueueName, autoAck: false, consumer: consumer);
 
             Console.WriteLine("Consumer started. Press Enter to exit.");
             Console.ReadLine();
