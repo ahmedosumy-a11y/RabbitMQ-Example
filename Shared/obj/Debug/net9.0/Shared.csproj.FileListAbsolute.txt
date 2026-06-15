@@ -9,3 +9,4 @@
 /home/galaxy/Downloads/C#.Net Project/Projects/RabbitMQ/Shared/obj/Debug/net9.0/refint/Shared.dll
 /home/galaxy/Downloads/C#.Net Project/Projects/RabbitMQ/Shared/obj/Debug/net9.0/Shared.pdb
 /home/galaxy/Downloads/C#.Net Project/Projects/RabbitMQ/Shared/obj/Debug/net9.0/ref/Shared.dll
+/home/galaxy/Downloads/C#.Net Project/Projects/RabbitMQ/Shared/obj/Debug/net9.0/Shared.sourcelink.json

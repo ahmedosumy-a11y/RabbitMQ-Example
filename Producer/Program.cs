@@ -1,28 +1,32 @@
-using Shared.Configration;
+using Publisher.Services;
+using Shared.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
-// builder.Services.Configure<RabbitMQConfigration>(
-//     builder.Configuration.GetSection("RabbitMQConfigration"));
+builder.Services.AddControllers();
+
+// Swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var rabbitmqConfig = builder.Configuration
-    .GetSection(nameof(RabbitMQConfigration))
-    .Get<RabbitMQConfigration>();
-builder.Services.AddSingleton(rabbitmqConfig);    
+    .GetSection(nameof(RabbitMQConfiguration))
+    .Get<RabbitMQConfiguration>()
+    ?? throw new InvalidOperationException("RabbitMQConfiguration section is missing.");
+
+builder.Services.AddSingleton(rabbitmqConfig);
+builder.Services.AddSingleton<IRabbitMQService, RabbitMQService>();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
 
-
+app.MapControllers();
 
 app.Run();
-
-

@@ -1,8 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "TqAl81JH5Dc=",
+  "dgSpecHash": "TMELsn2dbEY=",
   "success": true,
   "projectFilePath": "/home/galaxy/Downloads/C#.Net Project/Projects/RabbitMQ/Consumer/Consumer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/galaxy/.nuget/packages/microsoft.extensions.configuration/10.0.9/microsoft.extensions.configuration.10.0.9.nupkg.sha512",
+    "/home/galaxy/.nuget/packages/microsoft.extensions.configuration.abstractions/10.0.9/microsoft.extensions.configuration.abstractions.10.0.9.nupkg.sha512",
+    "/home/galaxy/.nuget/packages/microsoft.extensions.configuration.binder/10.0.9/microsoft.extensions.configuration.binder.10.0.9.nupkg.sha512",
+    "/home/galaxy/.nuget/packages/microsoft.extensions.configuration.fileextensions/10.0.9/microsoft.extensions.configuration.fileextensions.10.0.9.nupkg.sha512",
+    "/home/galaxy/.nuget/packages/microsoft.extensions.configuration.json/10.0.9/microsoft.extensions.configuration.json.10.0.9.nupkg.sha512",
+    "/home/galaxy/.nuget/packages/microsoft.extensions.fileproviders.abstractions/10.0.9/microsoft.extensions.fileproviders.abstractions.10.0.9.nupkg.sha512",
+    "/home/galaxy/.nuget/packages/microsoft.extensions.fileproviders.physical/10.0.9/microsoft.extensions.fileproviders.physical.10.0.9.nupkg.sha512",
+    "/home/galaxy/.nuget/packages/microsoft.extensions.filesystemglobbing/10.0.9/microsoft.extensions.filesystemglobbing.10.0.9.nupkg.sha512",
+    "/home/galaxy/.nuget/packages/microsoft.extensions.primitives/10.0.9/microsoft.extensions.primitives.10.0.9.nupkg.sha512",
+    "/home/galaxy/.nuget/packages/rabbitmq.client/7.2.1/rabbitmq.client.7.2.1.nupkg.sha512",
+    "/home/galaxy/.nuget/packages/system.io.pipelines/10.0.9/system.io.pipelines.10.0.9.nupkg.sha512",
+    "/home/galaxy/.nuget/packages/system.text.encodings.web/10.0.9/system.text.encodings.web.10.0.9.nupkg.sha512",
+    "/home/galaxy/.nuget/packages/system.text.json/10.0.9/system.text.json.10.0.9.nupkg.sha512",
+    "/home/galaxy/.nuget/packages/system.threading.ratelimiting/8.0.0/system.threading.ratelimiting.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
